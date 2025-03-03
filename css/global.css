@@ -48,5 +48,19 @@ main > h2 {
     padding:1rem 2rem;
     text-transform: uppercase;
 }
+footer {
 
+    background-color: var(--primary-color);
+
+    padding: 2rem;
+    & ul{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        grid-gap: 2rem;
+        & li:first-child{
+            grid-column: 1 / 3;
+        }
+    }
+}
 
