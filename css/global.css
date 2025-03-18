@@ -1,13 +1,23 @@
 :root{
-    --primary-color:#F0EADD;
-   --secondary-color:#104447;
-    --tertiary-color:#58ADB2;
-    --quaternary-color:#362416;
-    --quinary-color:#7B2514;
+    --primary-color:#CC94F2;
+   --secondary-color:#4A44F2;
+    --tertiary-color:#4149D9;
+    --quaternary-color:#7DF229;
+    --quinary-color:#F2CB05;
     --color-white:#FFFFFF;
     --color-black:#000000;
     --gradient-color1:linear-gradient(180deg ,var(--secondary-color) ,var(--primary-color));
-
+    --box-shadow: 27px 27px 53px #c3c3c3,
+    -27px -27px 53px #ffffff;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--color-white);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'prompt', sans-serif; !important;
 }
 *{
     margin: 0;
@@ -15,12 +25,18 @@
     box-sizing: border-box;
 }
 nav{
+    position: fixed;
     background-image: linear-gradient(180deg ,var(--secondary-color) ,var(--primary-color));
     color: var(--color-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    &  a{
+        color: var(--color-white);
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
 .menu ul {
     display: flex;
@@ -63,4 +79,65 @@ footer {
         }
     }
 }
+.overlay{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: #13131355;
+    z-index: 2
+}
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 50%;
+    background: var(--color-white);
+    z-index: 3;
+    box-shadow:#13131355 0 2px 4px;
+    border-radius: 1rem;
+}
+.close{
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 10;
+    color: var(--color-black);
+}
+.visible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  center;
+    gap: 0.5rem;
+}
+.primary-btn{
+    background-color: var(--secondary-color);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+}
+::webkit-scrollbar-track{
+    background-color: var(--primary-color);
+}
+
 

@@ -8,8 +8,18 @@
     <title>My portfolio</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="icon/css/all.css">
 </head>
 <body>
+<div class="overlay"></div>
+<div class="modal"></div>
+<div class="image-modal">
+    <img src ="" alt="">
+    <div class="close">X</div>
+    <div class="prev"><i class="fa-solid fa-square-caret-left"></i></div>
+    <div class="next"><i class="fa-solid fa-square-caret-right"></i></div>
+</div>
+
 <header>
     <nav>
         <div class="logo">
@@ -18,8 +28,9 @@
         </div>
         <div class="menu">
             <ul>
-                <li>menu1</li>
-                <li>menu2</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href ="#gallery">Gallery</a></li>
             </ul>
         </div>
     </nav>
@@ -27,46 +38,77 @@
     </div>
 </header>
 <main>
-    <div class="profile">
+    <div class="profile" id="profile">
         <h2 class="topic">Profile</h2>
-        <p>Name: Teethanaphad</p>
-    <p>Lastname: Sukpraserith </p>
-    </div>
-    <div>
-        <p>School: Chonradsodornumrung School</p>
-    </div>
-    <div>
-        <p>Age: 16</p>
-    </div>
-    <div>
-        <p>Hobbies</p>
-        <ul>
-            <li>Coding</li>
-            <li>Running</li>
-        </ul>
-    </div>
+        <main>
+            <div class="image-container">
+                <img src="image/DALL·E 2025-03-06 14.38.15 - A Thai male student with glasses, middle-parted hair, wearing a traditional Thai school uniform (white short-sleeved shirt with a front pocket and emb.webp"
+                     alt=""
+                     alt="profile">
+            </div>
+            <article>
+                <div>
+                    <p>Name: Teethanaphad</p>
+                    <p>Lastname: Sukpraserith </p>
+                </div>
+                <div>
+                    <p>School: Chonradsodornumrung School</p>
+                </div>
 
-</main>
-<footer>
-    <ul>
-        <li>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-            <span>Teethanaphad Sukpraserith</span>
-        </li>
-        <li>    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-            <span>ot24159@gmail.com</span>
-        </li>
-        <li>LineID:0874524159</li>
-        <li>github: thanaphad</li>
-    </ul>
-    <div class="form">
-        <form>
-            <label for="subscribe-email">Subscribe for news</label>
-            <input type="email" placeholder="email address" id="subscribe-email" />
-            <button type="submit">subscribe</button>
-        </form>
-    </div>
-</footer>
+                <div>
+                    <p>Age: 16</p>
+                </div>
+                <div>
+                    <p>Hobbies</p>
+                    <ul>
+                        <li>👨‍💻Coding</li>
+                        <li>🏀Playing-Basketball</li>
+                    </ul>
+                </div>
+            </article>
+
+        </main>
+        <div class="my-gallery" id="gallery">
+            <h2 class="topic">My Gallery</h2>
+            <main>
+                <div class="gallery">
+                    <img src="image/1_0.jpg" alt="">
+                    <img src="image/2_0.jpg" alt="">
+                    <img src="image/3_0.jpg" alt="">
+                    <img src="image/4_0.jpg" alt="">
+                    <img src="image/5_0.jpg" alt="">
+                    <img src="image/6_0.jpg" alt="">
+                    <img src="image/7_0.jpg" alt="">
+                    <img src="image/8_0.jpg" alt="">
+                    <img src="image/9_0.jpg" alt="">
+                    <img src="image/10_0.jpg" alt="">
+
+            </main>
+
+        </div>
+        <footer>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-id-card"></i>
+                    <span>Teethanaphad Sukpraserith</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-at"></i>
+                    <span>ot24159@gmail.com</span>
+                </li>
+                <li><i class="fa-brands fa-line"></i><span>0874524159</span></li>
+
+                <li><i class="fa-brands fa-github"></i><span> thanaphad</span></li>
+            </ul>
+            <div class="form">
+                <form id="my-form">
+                    <label for="subscribe-email">Subscribe for news</label>
+                    <input type="email" placeholder="email address" id="subscribe-email"/>
+                    <button type="submit">subscribe</button>
+                </form>
+            </div>
+        </footer>
+        <script src="js/index.js"></script>
 
 </body>
 </html>
